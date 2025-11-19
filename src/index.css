@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* Global Theme Overrides */
+:root {
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  margin: 0;
+  background-color: #0F1115; /* Obsidian Slate */
+  color: #F0F0F0;
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Selection Color */
+::selection {
+  background-color: #C74B36; /* Laterite Red */
+  color: #ffffff;
+}
+
+/* Manifesto Modal Animation */
+@keyframes slideUpFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDownToBottom {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.manifesto-modal {
+  animation: slideUpFromBottom 1s ease-out forwards;
+}
+
+.manifesto-modal.closing {
+  animation: slideDownToBottom 1s ease-in forwards;
+}
+
+.manifesto-container.closing {
+  animation: slideDownToBottom 1s ease-in forwards;
+}
+
+/* Ensure form controls (buttons/inputs) inherit text-transform from their container.
+   Some user-agent styles can override `text-transform` on buttons; making them inherit
+   keeps utilities like Tailwind's `uppercase` applied to parent elements effective
+   without reapplying the utility on each control. */
+@layer base {
+  button,
+  input[type="button"],
+  input[type="submit"] {
+    text-transform: inherit;
+  }
+}
