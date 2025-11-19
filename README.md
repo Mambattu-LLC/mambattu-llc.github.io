@@ -1,18 +1,21 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# MAMBATTU | Sovereign Systems & Collective Architecture
 
-Currently, two official plugins are available:
+> "The Village is the original Decentralized Autonomous Organization (DAO)."
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 1. The Ethos
 
-## React Compiler
+Mambattu is a boutique software consultancy specializing in Network Architectures, Web3 Contract Design, and Frontier Technology.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+The name originates from a small village on the border of Andhra Pradesh and Tamil Nadu. It represents a philosophy of **Organic Futurism**:
 
-Note: This will impact Vite dev & build performances.
+* **The Soil:** We believe in natural human experiences, privacy, and the "village mentality" of collective capability.
+* **The Code:** We translate these ancient social fabrics into deterministic, cryptographic systems.
 
-## Expanding the ESLint configuration
+## 2. The Aesthetic: "Organic Futurism"
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The visual identity bridges the gap between the red earth of the village and the fiber optics of the network.
+
+* **Palette:** Obsidian Slate (Privacy), Laterite Red (The Soil), Phosphor Amber (Intelligence).
+* **Typography:** *Cormorant Garamond* (Heritage) paired with *JetBrains Mono* (Logic).
+* **Interaction:** The interface is "dormant" until the user interacts, symbolizing that the network only exists when humans engage with it.
