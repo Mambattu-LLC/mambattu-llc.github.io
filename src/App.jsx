@@ -43,30 +43,30 @@ const Manifesto = ({ isOpen, onClose, onContact }) => {
 			{/* Added 'scrollbar-hide' class to the container */}
 			<div className="fixed inset-0 z-50 overflow-y-auto bg-[#0F1115]/98 backdrop-blur-md scrollbar-hide">
 				{/* Wrapper to center content vertically if short, or allow scroll if tall */}
-				<div className="flex min-h-full items-center justify-center p-4 md:p-8">
+				<div className="flex min-h-full items-center justify-center p-4">
 					{/* Inner card has no height constraints, it grows with content */}
-					<div className="relative w-full max-w-4xl bg-[#0F1115] border border-[#333] p-8 md:p-16 shadow-2xl">
+					<div className="relative w-full max-w-4xl bg-[#0F1115] border border-[#333] p-4 sm:p-8 md:p-16 shadow-2xl">
 						{/* Close Button */}
 						<button
 							onClick={onClose}
-							className="absolute top-6 right-6 text-[#8A8A8A] hover:text-[#C74B36] transition-colors"
+							className="absolute top-4 right-4 sm:top-6 sm:right-6 text-[#8A8A8A] hover:text-[#C74B36] transition-colors"
 						>
 							<X size={24} />
 						</button>
 
-						<div className="space-y-8">
+						<div className="space-y-6 md:space-y-8">
 							{/* Header */}
 							<div>
-								<div className="text-[#C74B36] text-xs tracking-[0.3em] uppercase mb-2">
+								<div className="text-[#C74B36] text-sm sm:text-base tracking-[0.3em] uppercase mb-2">
 									The Mambattu Protocol
 								</div>
-								<h2 className="font-serif text-4xl md:text-5xl text-[#EAEAEA]">
+								<h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#EAEAEA]">
 									Engagement Ethos
 								</h2>
 							</div>
 
 							{/* Intro */}
-							<p className="font-serif text-lg md:text-xl text-[#8A8A8A] leading-relaxed border-l-2 border-[#333] pl-6">
+							<p className="font-serif text-base sm:text-lg md:text-xl lg:text-2xl text-[#8A8A8A] leading-relaxed border-l-2 border-[#333] pl-4">
 								We are not general contractors. Mambattu seeks out projects that
 								elevate human sovereignty and redefine collaborative systems.{" "}
 								<span className="text-[#F0F0F0] italic">
@@ -75,21 +75,21 @@ const Manifesto = ({ isOpen, onClose, onContact }) => {
 								</span>
 							</p>
 
-							<div className="border-t border-[#ffffff05] my-8"></div>
+							<div className="border-t border-[#ffffff05] my-6 md:my-8"></div>
 
 							{/* Section 1: Foundation */}
 							<div>
-								<h3 className="text-[#FFB000] text-xs md:text-sm tracking-[0.2em] uppercase mb-6 flex items-center gap-3">
-									<span className="w-1.5 h-1.5 bg-[#FFB000] rounded-full"></span>{" "}
+								<h3 className="text-[#FFB000] text-sm sm:text-base md:text-lg tracking-[0.2em] uppercase mb-6 flex items-center gap-2 md:gap-3">
+									<span className="w-1.5 h-1.5 bg-[#FFB000] rounded-full shrink-0"></span>{" "}
 									01. Our Foundation
 								</h3>
-								<div className="grid gap-8 pl-4 md:pl-6">
+								<div className="grid gap-6 md:gap-8 pl-4">
 									{/* Groundedness */}
 									<div>
-										<h4 className="font-serif text-lg text-[#EAEAEA] mb-2">
+										<h4 className="font-serif text-xl md:text-2xl text-[#EAEAEA] mb-2">
 											Groundedness & Transparency
 										</h4>
-										<p className="text-[#8A8A8A] text-sm leading-relaxed">
+										<p className="text-[#8A8A8A] text-sm md:text-base leading-relaxed">
 											Every line of code must answer a real human need, not just
 											hype. We anchor frontier technology to natural, intuitive
 											experiences. Our processes are open-sourced to the client;
@@ -98,10 +98,10 @@ const Manifesto = ({ isOpen, onClose, onContact }) => {
 									</div>
 									{/* Quality */}
 									<div>
-										<h4 className="font-serif text-lg text-[#EAEAEA] mb-2">
+										<h4 className="font-serif text-xl md:text-2xl text-[#EAEAEA] mb-2">
 											Quality as Immutable Architecture
 										</h4>
-										<p className="text-[#8A8A8A] text-sm leading-relaxed">
+										<p className="text-[#8A8A8A] text-sm md:text-base leading-relaxed">
 											We treat every contract as immutable architecture.
 											Rigorous auditing, deterministic logic, and long-term
 											viability are non-negotiable standards.
@@ -112,16 +112,16 @@ const Manifesto = ({ isOpen, onClose, onContact }) => {
 
 							{/* Section 2: The Mandate */}
 							<div className="pt-4">
-								<h3 className="text-[#FFB000] text-xs md:text-sm tracking-[0.2em] uppercase mb-6 flex items-center gap-3">
-									<span className="w-1.5 h-1.5 bg-[#FFB000] rounded-full"></span>{" "}
-									02. The Mandate (Projects We Seek)
+								<h3 className="text-[#FFB000] text-sm sm:text-base md:text-lg tracking-[0.2em] uppercase mb-6 flex items-center gap-2 md:gap-3">
+									<span className="w-1.5 h-1.5 bg-[#FFB000] rounded-full shrink-0"></span>{" "}
+									02. The Mandate
 								</h3>
-								<div className="grid md:grid-cols-2 gap-8 pl-4 md:pl-6">
+								<div className="grid md:grid-cols-2 gap-6 md:gap-8 pl-4">
 									<div className="border-l border-[#333] pl-4">
-										<h4 className="font-serif text-lg text-[#EAEAEA] mb-2">
+										<h4 className="font-serif text-xl md:text-2xl text-[#EAEAEA] mb-2">
 											Sovereign Systems
 										</h4>
-										<ul className="text-[#8A8A8A] text-sm space-y-2 list-disc list-inside marker:text-[#C74B36]">
+										<ul className="text-[#8A8A8A] text-sm md:text-base space-y-2 list-disc list-inside marker:text-[#C74B36]">
 											<li>Privacy-first user experiences.</li>
 											<li>Zero-knowledge proofs (ZKPs) & DID.</li>
 											<li>Robust, permissionless infrastructure.</li>
@@ -129,10 +129,10 @@ const Manifesto = ({ isOpen, onClose, onContact }) => {
 									</div>
 
 									<div className="border-l border-[#333] pl-4">
-										<h4 className="font-serif text-lg text-[#EAEAEA] mb-2">
+										<h4 className="font-serif text-xl md:text-2xl text-[#EAEAEA] mb-2">
 											Collective Coordination
 										</h4>
-										<ul className="text-[#8A8A8A] text-sm space-y-2 list-disc list-inside marker:text-[#C74B36]">
+										<ul className="text-[#8A8A8A] text-sm md:text-base space-y-2 list-disc list-inside marker:text-[#C74B36]">
 											<li>Governance frameworks & Web3 DAOs.</li>
 											<li>Novel incentive structures.</li>
 											<li>Trustless collaboration protocols.</li>
@@ -140,10 +140,10 @@ const Manifesto = ({ isOpen, onClose, onContact }) => {
 									</div>
 
 									<div className="border-l border-[#333] pl-4 md:col-span-2">
-										<h4 className="font-serif text-lg text-[#EAEAEA] mb-2">
+										<h4 className="font-serif text-xl md:text-2xl text-[#EAEAEA] mb-2">
 											Organic Frontiers
 										</h4>
-										<p className="text-[#8A8A8A] text-sm">
+										<p className="text-[#8A8A8A] text-sm md:text-base">
 											Projects exploring new intersections of technology and
 											nature/health/humanity. Innovation that minimizes
 											complexity and enhances human-centric design.
@@ -153,19 +153,19 @@ const Manifesto = ({ isOpen, onClose, onContact }) => {
 							</div>
 
 							{/* Closing */}
-							<div className="pt-12 text-center">
-								<p className="font-serif text-lg md:text-xl text-[#F0F0F0] italic mb-6">
+							<div className="pt-8 md:pt-12 text-center">
+								<p className="font-serif text-base sm:text-lg md:text-xl text-[#F0F0F0] italic mb-6">
 									"If your vision aligns with our architecture, the loom is
 									ready."
 								</p>
 								<button
 									onClick={onContact}
-									className="inline-flex items-center gap-2 text-[#C74B36] text-xs tracking-[0.2em] uppercase hover:text-[#FFB000] transition-colors border-b border-transparent hover:border-[#FFB000] pb-1"
+									className="inline-flex items-center gap-2 text-[#C74B36] text-xs sm:text-sm md:text-base tracking-[0.2em] uppercase hover:text-[#FFB000] transition-colors border-b border-transparent hover:border-[#FFB000] pb-1"
 								>
 									<span className="group-hover:text-[#F0F0F0] font-bold">
 										&gt;
 									</span>{" "}
-									Initialize_dialogue
+									Reach_Out
 								</button>
 							</div>
 						</div>
@@ -174,6 +174,15 @@ const Manifesto = ({ isOpen, onClose, onContact }) => {
 			</div>
 		</>
 	);
+};
+
+// Colors from Palette
+const COLORS = {
+	bg: "#0F1115", // Obsidian Slate
+	accent: "#C74B36", // Laterite Red
+	light: "#FFB000", // Phosphor Amber
+	text: "#F0F0F0", // Paper White
+	dim: "#8A8A8A", // Dust
 };
 
 // --- Main Component ---
@@ -195,15 +204,7 @@ const MambattuLanding = () => {
 
 	const canvasRef = useRef(null);
 	const terminalEndRef = useRef(null);
-
-	// Colors from Palette
-	const COLORS = {
-		bg: "#0F1115", // Obsidian Slate
-		accent: "#C74B36", // Laterite Red
-		light: "#FFB000", // Phosphor Amber
-		text: "#F0F0F0", // Paper White
-		dim: "#8A8A8A", // Dust
-	};
+	const cipherIntervalRef = useRef(null);
 
 	// --- Visuals: "Dormant" Network Roots Animation ---
 	useEffect(() => {
@@ -304,17 +305,24 @@ const MambattuLanding = () => {
 		};
 	}, []);
 
-	// --- Cipher Animation on Load ---
-	useEffect(() => {
-		// REVERTED: Back to "MAMBATTU"
+	// --- Cipher Animation Logic ---
+	const triggerCipherAnimation = () => {
 		const targetText = "MAMBATTU";
 		const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$#@%&";
 		let iteration = 0;
-		let interval = null;
 
-		interval = setInterval(() => {
-			// eslint-disable-next-line no-unused-vars
-			setTitleText((_prev) =>
+		if (cipherIntervalRef.current) clearInterval(cipherIntervalRef.current);
+
+		// Immediate feedback: randomize text instantly before interval starts
+		setTitleText(
+			targetText
+				.split("")
+				.map(() => chars[Math.floor(Math.random() * chars.length)])
+				.join("")
+		);
+
+		cipherIntervalRef.current = setInterval(() => {
+			setTitleText(() =>
 				targetText
 					.split("")
 					.map((letter, index) => {
@@ -327,13 +335,24 @@ const MambattuLanding = () => {
 			);
 
 			if (iteration >= targetText.length) {
-				clearInterval(interval);
+				clearInterval(cipherIntervalRef.current);
 			}
 
 			iteration += 1 / 3; // Speed of deciphering
-		}, 50);
+		}, 30);
+	};
 
-		return () => clearInterval(interval);
+	// --- Cipher Animation on Load ---
+	useEffect(() => {
+		// Defer slightly to avoid synchronous state update warning during mount
+		const timer = setTimeout(() => {
+			triggerCipherAnimation();
+		}, 0);
+
+		return () => {
+			clearTimeout(timer);
+			if (cipherIntervalRef.current) clearInterval(cipherIntervalRef.current);
+		};
 	}, []);
 
 	// --- Terminal Logic ---
@@ -450,11 +469,11 @@ const MambattuLanding = () => {
 			/>
 
 			{/* Navigation */}
-			<nav className="relative z-10 flex justify-between items-center px-8 py-8 border-b border-[#ffffff05]">
-				<div className="text-xs md:text-sm tracking-[0.2em] text-[#8A8A8A] uppercase">
+			<nav className="relative z-10 flex justify-between items-center px-4 md:px-8 py-4 md:py-8 border-b border-[#ffffff05]">
+				<div className="text-sm sm:text-base md:text-lg tracking-[0.2em] text-[#8A8A8A] uppercase">
 					Est. 2025
 				</div>
-				<div className="flex gap-8 text-xs uppercase tracking-widest">
+				<div className="flex gap-4 md:gap-8 text-sm sm:text-base uppercase tracking-widest">
 					<button onClick={() => setIsManifestoOpen(true)}>
 						<span className="cursor-pointer hover:text-[#FFB000] transition-colors duration-300 focus:outline-none">
 							Manifesto
@@ -467,9 +486,9 @@ const MambattuLanding = () => {
 			</nav>
 
 			{/* Main Content */}
-			<main className="relative z-10 flex flex-col items-center justify-center h-[80vh] px-4 text-center">
+			<main className="relative z-10 flex flex-col items-center justify-center h-[80vh] px-4 md:px-8 text-center">
 				{/* Status Indicator */}
-				<div className="mb-8 flex items-center gap-3 text-[#C74B36] text-[10px] tracking-[0.3em] uppercase">
+				<div className="mb-6 md:mb-8 flex items-center gap-2 md:gap-3 text-[#C74B36] text-sm sm:text-base tracking-[0.3em] uppercase">
 					<div className="relative flex h-2 w-2">
 						<span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C74B36] opacity-75"></span>
 						<span className="relative inline-flex rounded-full h-2 w-2 bg-[#C74B36]"></span>
@@ -477,46 +496,48 @@ const MambattuLanding = () => {
 					Headless Identity
 				</div>
 
-				{/* Cipher Title - Heritage Font */}
-				{/* REVERTED: Removed ElephantGlyph and restored standard text rendering */}
-				<h1 className="font-serif text-6xl md:text-8xl lg:text-[9rem] leading-none tracking-tight text-[#EAEAEA] mix-blend-screen select-none">
-					{titleText}
-				</h1>
-
-				{/* UPDATED: New, concise tagline */}
-				<p className="mt-8 max-w-lg text-sm text-[#8A8A8A] font-light leading-relaxed tracking-wide">
+			{/* Cipher Title - Heritage Font */}
+			{/* REVERTED: Removed ElephantGlyph and restored standard text rendering */}
+			<h1
+				onClick={triggerCipherAnimation}
+				className="relative z-20 font-serif text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] leading-none tracking-tight text-[#EAEAEA] mix-blend-screen select-none cursor-pointer hover:text-[#FFB000] transition-colors duration-300"
+			>
+				{titleText}
+			</h1>				{/* UPDATED: New, concise tagline */}
+				<p className="mt-6 md:mt-8 max-w-lg text-base sm:text-lg md:text-xl text-[#8A8A8A] font-light leading-relaxed tracking-wide px-4">
 					Sovereign Infrastructure. <br />
 					Collective Future.
 				</p>
 
 				{/* CLI Trigger Button */}
-				<div className="mt-16">
+				<div className="mt-12 md:mt-16">
 					<button
 						onClick={() => setIsTerminalOpen(true)}
-						className="group relative px-8 py-4 bg-transparent overflow-hidden border border-[#333] hover:border-[#FFB000] transition-colors duration-500 focus:outline-none"
+						className="group relative px-4 md:px-8 py-3 md:py-4 bg-transparent overflow-hidden border border-[#333] hover:border-[#FFB000] transition-colors duration-500 focus:outline-none"
 					>
-						<div className="absolute inset-0 w-0 bg-[#FFB000] transition-all duration-[250ms] ease-out group-hover:w-full opacity-10"></div>
-						<span className="relative flex items-center gap-3 text-xs tracking-[0.2em] uppercase text-[#F0F0F0] group-hover:text-[#FFB000]">
+						<div className="absolute inset-0 w-0 bg-[#FFB000] transition-all duration-250 ease-out group-hover:w-full opacity-10"></div>
+						<span className="relative flex items-center gap-2 md:gap-3 text-sm sm:text-base md:text-lg tracking-[0.2em] uppercase text-[#F0F0F0] group-hover:text-[#FFB000]">
 							<span className="text-[#FFB000] group-hover:text-[#F0F0F0] font-bold">
 								&gt;
 							</span>{" "}
-							Initialize_dialogue
+							<span className="hidden xs:inline">Reach_Out</span>
+							<span className="xs:hidden">Reach_Out</span>
 						</span>
 					</button>
 				</div>
 
 				{/* Footer Grid - Pinned & Updated to Match Manifesto Pillars */}
-				<div className="fixed bottom-8 w-full max-w-7xl px-8 hidden md:flex justify-between text-left text-[10px] uppercase tracking-[0.2em] text-[#555] z-20">
+				<div className="fixed bottom-6 md:bottom-8 w-full max-w-7xl px-4 md:px-8 hidden md:flex justify-between text-left text-sm md:text-base uppercase tracking-[0.2em] text-[#555] z-20 gap-4">
 					<div className="flex flex-col gap-1 hover:text-[#C74B36] transition-colors cursor-default">
-						<Server size={14} className="text-[#C74B36] mb-2" />
+						<Server size={14} className="text-[#C74B36] mb-1 md:mb-2" />
 						<span>Sovereign Systems</span>
 					</div>
 					<div className="flex flex-col gap-1 hover:text-[#C74B36] transition-colors cursor-default">
-						<Users size={14} className="text-[#C74B36] mb-2" />
+						<Users size={14} className="text-[#C74B36] mb-1 md:mb-2" />
 						<span>Collective Coordination</span>
 					</div>
 					<div className="flex flex-col gap-1 hover:text-[#C74B36] transition-colors cursor-default">
-						<Cpu size={14} className="text-[#C74B36] mb-2" />
+						<Cpu size={14} className="text-[#C74B36] mb-1 md:mb-2" />
 						<span>Organic Frontiers</span>
 					</div>
 				</div>
@@ -524,18 +545,18 @@ const MambattuLanding = () => {
 
 			{/* TERMINAL OVERLAY */}
 			{isTerminalOpen && (
-				<div className="fixed inset-0 z-50 flex items-center justify-center bg-[#050505]/95 backdrop-blur-sm">
-					<div className="w-full max-w-2xl h-[600px] bg-[#0F1115] border border-[#333] shadow-[0_0_50px_rgba(0,0,0,0.8)] flex flex-col font-mono text-sm">
+				<div className="fixed inset-0 z-50 flex items-center justify-center bg-[#050505]/95 backdrop-blur-sm p-4 sm:p-0">
+					<div className="w-full h-screen sm:h-[600px] sm:max-w-2xl bg-[#0F1115] border border-[#333] shadow-[0_0_50px_rgba(0,0,0,0.8)] flex flex-col font-mono text-sm">
 						{/* Terminal Header */}
-						<div className="bg-[#15171C] px-4 py-3 flex justify-between items-center border-b border-[#333]">
-							<div className="flex items-center gap-2 text-[#8A8A8A] text-xs tracking-wider">
-								<Terminal size={12} />
-								<span>ROOT ACCESS // MAMBATTU_SHELL</span>
+						<div className="bg-[#15171C] px-4 md:px-6 py-2 md:py-3 flex justify-between items-center border-b border-[#333] gap-2">
+							<div className="flex items-center gap-2 text-[#8A8A8A] text-xs sm:text-sm tracking-wider min-w-0">
+								<Terminal size={12} className="shrink-0" />
+								<span className="truncate">ROOT ACCESS // MAMBATTU_SHELL</span>
 							</div>
-							<div className="flex items-center gap-2">
+							<div className="flex items-center gap-1 md:gap-2 shrink-0">
 								<button
 									onClick={resetTerminal}
-									className="text-[#8A8A8A] hover:text-[#FFB000] transition-colors text-xs px-2 py-1 border border-[#333] hover:border-[#FFB000]"
+									className="text-[#8A8A8A] hover:text-[#FFB000] transition-colors text-xs sm:text-sm px-2 py-1 border border-[#333] hover:border-[#FFB000]"
 									title="Reset terminal"
 								>
 									RESET
@@ -550,21 +571,20 @@ const MambattuLanding = () => {
 						</div>
 
 						{/* Terminal Instructions */}
-						<div className="px-8 py-4 border-b border-[#333] bg-[#15171C] text-[#8A8A8A] text-xs leading-relaxed space-y-2">
+						<div className="px-4 md:px-8 py-3 md:py-4 border-b border-[#333] bg-[#15171C] text-[#8A8A8A] text-xs sm:text-sm leading-relaxed space-y-1 md:space-y-2">
 							<div>
 								<span className="text-[#FFB000]">&gt; Getting Started:</span>
 							</div>
-							<div className="ml-4 space-y-1">
-								<div>• Type <span className="text-[#F0F0F0]">"init"</span> to begin the handshake protocol</div>
-								<div>• Follow the prompts to share your organization, email, and project details</div>
-								<div>• Type <span className="text-[#F0F0F0]">"clear"</span> to reset the terminal</div>
-								<div>• Type <span className="text-[#F0F0F0]">"close"</span> to exit</div>
+							<div className="ml-3 md:ml-4 space-y-1 text-xs sm:text-sm">
+								<div>• Type <span className="text-[#F0F0F0]">"hello"</span> to begin</div>
+								<div>• Follow prompts to share details</div>
+								<div>• <span className="text-[#F0F0F0]">"clear"</span> to reset | <span className="text-[#F0F0F0]">"close"</span> to exit</div>
 							</div>
 						</div>
 
 						{/* Terminal Output */}
 						<div
-							className="flex-1 p-8 overflow-y-auto text-[#FFB000]"
+							className="flex-1 p-4 md:p-8 overflow-y-auto text-[#FFB000] text-sm sm:text-base"
 							onClick={() => document.getElementById("termInput").focus()}
 						>
 							{terminalHistory.map((line, i) => (
@@ -580,8 +600,8 @@ const MambattuLanding = () => {
 							))}
 
 							{/* Active Input Line */}
-							<div className="flex mt-4 items-center">
-								<span className="text-[#F0F0F0] mr-3">&gt;</span>
+							<div className="flex mt-4 items-center gap-2">
+								<span className="text-[#F0F0F0] shrink-0">&gt;</span>
 								<input
 									id="termInput"
 									type="text"
@@ -590,7 +610,7 @@ const MambattuLanding = () => {
 									onChange={(e) => setTerminalInput(e.target.value)}
 									onKeyDown={handleCommand}
 									disabled={formSubmitted}
-									className={`bg-transparent border-none outline-none flex-1 text-[#FFB000] placeholder-[#333] caret-[#C74B36] ${
+									className={`bg-transparent border-none outline-none flex-1 text-[#FFB000] placeholder-[#333] caret-[#C74B36] text-sm sm:text-base ${
 										formSubmitted ? "opacity-50 cursor-not-allowed" : ""
 									}`}
 									placeholder={getCurrentPrompt()}

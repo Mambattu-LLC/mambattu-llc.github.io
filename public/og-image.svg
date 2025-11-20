@@ -40,7 +40,7 @@
 
     <!-- Decorative Terminal Prompt -->
     <rect x="480" y="480" width="240" height="40" rx="4" stroke="#333" fill="#0A0A0A"/>
-    <text x="600" y="505" fill="#FFB000" font-family="'Courier New', monospace" font-size="14" letter-spacing="0.1em">> Initialize_dialogue</text>
+    <text x="600" y="505" fill="#FFB000" font-family="'Courier New', monospace" font-size="14" letter-spacing="0.1em">> Reach_Out</text>
   </g>
 
   <!-- Corner Accents -->

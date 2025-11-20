@@ -4,6 +4,14 @@
 :root {
   --font-serif: 'Cormorant Garamond', serif;
   --font-mono: 'JetBrains Mono', monospace;
+  --base-font-size: 16px;
+}
+
+/* Mobile-first: Default base font size */
+@media (max-width: 640px) {
+  :root {
+    --base-font-size: 16px;
+  }
 }
 
 body {
@@ -11,6 +19,7 @@ body {
   background-color: #0F1115; /* Obsidian Slate */
   color: #F0F0F0;
   font-family: var(--font-mono);
+  font-size: var(--base-font-size);
   -webkit-font-smoothing: antialiased;
 }
 
