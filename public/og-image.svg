@@ -1,0 +1,52 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background: Obsidian Slate -->
+  <rect width="1200" height="630" fill="#0F1115"/>
+
+  <!-- Abstract Network Connections (Static Background) -->
+  <g opacity="0.2">
+    <circle cx="100" cy="100" r="2" fill="#8A8A8A"/>
+    <circle cx="1100" cy="500" r="2" fill="#8A8A8A"/>
+    <circle cx="600" cy="550" r="2" fill="#8A8A8A"/>
+    <circle cx="200" cy="500" r="2" fill="#8A8A8A"/>
+    <circle cx="900" cy="100" r="2" fill="#8A8A8A"/>
+
+    <!-- Connection Lines -->
+    <path d="M100 100 L200 500" stroke="#C74B36" stroke-width="1"/>
+    <path d="M200 500 L600 550" stroke="#C74B36" stroke-width="1"/>
+    <path d="M600 550 L1100 500" stroke="#C74B36" stroke-width="1"/>
+    <path d="M1100 500 L900 100" stroke="#C74B36" stroke-width="1"/>
+    <path d="M900 100 L100 100" stroke="#C74B36" stroke-width="1"/>
+
+    <!-- Central Cluster -->
+    <circle cx="600" cy="315" r="300" stroke="#FFB000" stroke-opacity="0.05" stroke-width="1" stroke-dasharray="10 10"/>
+    <circle cx="600" cy="315" r="250" stroke="#C74B36" stroke-opacity="0.05" stroke-width="1"/>
+  </g>
+
+  <!-- Main Content Container -->
+  <g text-anchor="middle">
+
+    <!-- Status Indicator -->
+    <circle cx="600" cy="180" r="4" fill="#C74B36">
+      <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="600" y="200" fill="#C74B36" font-family="monospace" font-size="14" letter-spacing="0.3em" text-transform="uppercase">Headless Identity</text>
+
+    <!-- Brand Name (Serif Heritage) -->
+    <!-- Note: Fonts in SVG often default to system fonts. We use generic serif stack here. -->
+    <text x="600" y="330" fill="#EAEAEA" font-family="'Times New Roman', serif" font-size="120" font-weight="bold" letter-spacing="-0.02em">MAMBATTU</text>
+
+    <!-- Tagline (Mono Logic) -->
+    <text x="600" y="400" fill="#8A8A8A" font-family="'Courier New', monospace" font-size="24" letter-spacing="0.05em">Sovereign Infrastructure. Collective Future.</text>
+
+    <!-- Decorative Terminal Prompt -->
+    <rect x="480" y="480" width="240" height="40" rx="4" stroke="#333" fill="#0A0A0A"/>
+    <text x="600" y="505" fill="#FFB000" font-family="'Courier New', monospace" font-size="14" letter-spacing="0.1em">> Initialize_dialogue</text>
+  </g>
+
+  <!-- Corner Accents -->
+  <path d="M40 40 L60 40 M40 40 L40 60" stroke="#FFB000" stroke-width="2"/>
+  <path d="M1160 40 L1140 40 M1160 40 L1160 60" stroke="#FFB000" stroke-width="2"/>
+  <path d="M40 590 L60 590 M40 590 L40 570" stroke="#FFB000" stroke-width="2"/>
+  <path d="M1160 590 L1140 590 M1160 590 L1160 570" stroke="#FFB000" stroke-width="2"/>
+
+</svg>

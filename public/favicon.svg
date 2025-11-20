@@ -1,0 +1,17 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background: Obsidian Slate with rounded corners -->
+  <rect width="64" height="64" rx="16" fill="#0F1115"/>
+
+  <!-- The "Network M" Glyph -->
+  <!-- Left leg (The Trunk/Root) - Laterite Red -->
+  <path d="M18 48V20C18 18 20 16 22 16H24C26 16 28 18 28 20V36" stroke="#C74B36" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Center Connection (The Circuit) - Phosphor Amber -->
+  <path d="M28 36L32 40L36 36" stroke="#FFB000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Right leg (The Structure) - Paper White -->
+  <path d="M36 36V20C36 18 38 16 40 16H42C44 16 46 18 46 20V48" stroke="#EAEAEA" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Active Status Dot -->
+  <circle cx="46" cy="12" r="2" fill="#FFB000"/>
+</svg>
