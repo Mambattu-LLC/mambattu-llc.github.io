@@ -123,7 +123,7 @@ const Manifesto = ({ isOpen, onClose, onContact }) => {
 										</h4>
 										<ul className="text-[#8A8A8A] text-sm md:text-base space-y-2 list-disc list-inside marker:text-[#C74B36]">
 											<li>Privacy-first user experiences.</li>
-											<li>Zero-knowledge proofs (ZKPs) & DID.</li>
+											<li>Selective disclosures & data governance tenets.</li>
 											<li>Robust, permissionless infrastructure.</li>
 										</ul>
 									</div>
