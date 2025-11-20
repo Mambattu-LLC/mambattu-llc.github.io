@@ -344,14 +344,32 @@ const MambattuLanding = () => {
 		if (isTerminalOpen) scrollToBottom();
 	}, [terminalHistory, isTerminalOpen]);
 
+	// Helper to get current prompt text
+	const getCurrentPrompt = () => {
+		if (terminalStep === 0) return "Type 'init' to begin...";
+		if (terminalStep === 1) return "ACME Inc.";
+		if (terminalStep === 2) return "me@acme.com";
+		if (terminalStep === 3) return "Describe your project...";
+		return "Initialize...";
+	};
+
+	const resetTerminal = () => {
+		setTerminalHistory([
+			{ type: "system", content: "MAMBATTU_CORE v1.0.0 [SECURE]" },
+			{ type: "system", content: "Network State: DORMANT" },
+			{ type: "system", content: "Awaiting User Keypress..." },
+		]);
+		setTerminalInput("");
+		setTerminalStep(0);
+	};
+
 	const handleCommand = (e) => {
 		if (e.key === "Enter") {
 			const input = terminalInput.trim();
 			const newHistory = [...terminalHistory, { type: "user", content: input }];
 
 			if (input.toLowerCase() === "clear") {
-				setTerminalHistory([]);
-				setTerminalInput("");
+				resetTerminal();
 				return;
 			}
 
@@ -499,19 +517,41 @@ const MambattuLanding = () => {
 			{/* TERMINAL OVERLAY */}
 			{isTerminalOpen && (
 				<div className="fixed inset-0 z-50 flex items-center justify-center bg-[#050505]/95 backdrop-blur-sm">
-					<div className="w-full max-w-2xl h-[500px] bg-[#0F1115] border border-[#333] shadow-[0_0_50px_rgba(0,0,0,0.8)] flex flex-col font-mono text-sm">
+					<div className="w-full max-w-2xl h-[600px] bg-[#0F1115] border border-[#333] shadow-[0_0_50px_rgba(0,0,0,0.8)] flex flex-col font-mono text-sm">
 						{/* Terminal Header */}
 						<div className="bg-[#15171C] px-4 py-3 flex justify-between items-center border-b border-[#333]">
 							<div className="flex items-center gap-2 text-[#8A8A8A] text-xs tracking-wider">
 								<Terminal size={12} />
 								<span>ROOT ACCESS // MAMBATTU_SHELL</span>
 							</div>
-							<button
-								onClick={() => setIsTerminalOpen(false)}
-								className="text-[#8A8A8A] hover:text-[#C74B36] transition-colors"
-							>
-								<X size={14} />
-							</button>
+							<div className="flex items-center gap-2">
+								<button
+									onClick={resetTerminal}
+									className="text-[#8A8A8A] hover:text-[#FFB000] transition-colors text-xs px-2 py-1 border border-[#333] hover:border-[#FFB000]"
+									title="Reset terminal"
+								>
+									RESET
+								</button>
+								<button
+									onClick={() => setIsTerminalOpen(false)}
+									className="text-[#8A8A8A] hover:text-[#C74B36] transition-colors"
+								>
+									<X size={14} />
+								</button>
+							</div>
+						</div>
+
+						{/* Terminal Instructions */}
+						<div className="px-8 py-4 border-b border-[#333] bg-[#15171C] text-[#8A8A8A] text-xs leading-relaxed space-y-2">
+							<div>
+								<span className="text-[#FFB000]">&gt; Getting Started:</span>
+							</div>
+							<div className="ml-4 space-y-1">
+								<div>• Type <span className="text-[#F0F0F0]">"init"</span> to begin the handshake protocol</div>
+								<div>• Follow the prompts to share your organization, email, and project details</div>
+								<div>• Type <span className="text-[#F0F0F0]">"clear"</span> to reset the terminal</div>
+								<div>• Type <span className="text-[#F0F0F0]">"close"</span> to exit</div>
+							</div>
 						</div>
 
 						{/* Terminal Output */}
@@ -542,7 +582,7 @@ const MambattuLanding = () => {
 									onChange={(e) => setTerminalInput(e.target.value)}
 									onKeyDown={handleCommand}
 									className="bg-transparent border-none outline-none flex-1 text-[#FFB000] placeholder-[#333] caret-[#C74B36]"
-									placeholder="Initialize..."
+									placeholder={getCurrentPrompt()}
 									autoComplete="off"
 								/>
 							</div>
