@@ -182,6 +182,7 @@ const MambattuLanding = () => {
 	const [isManifestoOpen, setIsManifestoOpen] = useState(false);
 	const [terminalStep, setTerminalStep] = useState(0);
 	const [terminalInput, setTerminalInput] = useState("");
+	const [formSubmitted, setFormSubmitted] = useState(false);
 
 	// REVERTED: Back to full "MAMBATTU" text logic
 	const [titleText, setTitleText] = useState("MAMBATTU");
@@ -350,7 +351,7 @@ const MambattuLanding = () => {
 		if (terminalStep === 1) return "ACME Inc.";
 		if (terminalStep === 2) return "me@acme.com";
 		if (terminalStep === 3) return "Describe your project...";
-		return "Initialize...";
+		return "";
 	};
 
 	const resetTerminal = () => {
@@ -361,10 +362,16 @@ const MambattuLanding = () => {
 		]);
 		setTerminalInput("");
 		setTerminalStep(0);
+		setFormSubmitted(false);
 	};
 
 	const handleCommand = (e) => {
 		if (e.key === "Enter") {
+			// Don't accept input after form submission
+			if (formSubmitted) {
+				return;
+			}
+
 			const input = terminalInput.trim();
 			const newHistory = [...terminalHistory, { type: "user", content: input }];
 
@@ -425,7 +432,8 @@ const MambattuLanding = () => {
 						{ type: "system", content: "The Village will respond." },
 					]);
 				}, 1000);
-				setTerminalStep(0);
+				setFormSubmitted(true);
+				setTerminalStep(-1);
 			}
 
 			setTerminalHistory(newHistory);
@@ -577,11 +585,14 @@ const MambattuLanding = () => {
 								<input
 									id="termInput"
 									type="text"
-									autoFocus
+									autoFocus={!formSubmitted}
 									value={terminalInput}
 									onChange={(e) => setTerminalInput(e.target.value)}
 									onKeyDown={handleCommand}
-									className="bg-transparent border-none outline-none flex-1 text-[#FFB000] placeholder-[#333] caret-[#C74B36]"
+									disabled={formSubmitted}
+									className={`bg-transparent border-none outline-none flex-1 text-[#FFB000] placeholder-[#333] caret-[#C74B36] ${
+										formSubmitted ? "opacity-50 cursor-not-allowed" : ""
+									}`}
 									placeholder={getCurrentPrompt()}
 									autoComplete="off"
 								/>
