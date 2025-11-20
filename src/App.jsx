@@ -434,9 +434,9 @@ const MambattuLanding = () => {
 							Manifesto
 						</span>
 					</button>
-					<span className="cursor-pointer hover:text-[#FFB000] transition-colors duration-300">
+					{/* <span className="cursor-pointer hover:text-[#FFB000] transition-colors duration-300">
 						Projects
-					</span>
+					</span> */}
 				</div>
 			</nav>
 
